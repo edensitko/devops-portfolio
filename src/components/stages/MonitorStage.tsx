@@ -101,7 +101,7 @@ export default function MonitorStage() {
                 {/* Content Area */}
                 <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
                     {/* Contact Info Sidebar */}
-                    <div className="md:w-1/3 bg-[#161b22]/50 p-6 flex flex-col justify-between border-b md:border-b-0 md:border-r border-gray-700/50 overflow-y-auto">
+                    <div className="h-[200px] md:h-auto md:w-1/3 bg-[#161b22]/50 p-6 flex flex-col justify-between border-b md:border-b-0 md:border-r border-gray-700/50 overflow-y-auto">
                         <div className="space-y-6">
                             <h3 className="text-lg font-bold text-gray-200 uppercase tracking-wider text-sm flex items-center gap-2">
                                 <span className="w-1.5 h-4 bg-blue-500 rounded-sm"></span>

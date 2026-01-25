@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start"
   },
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "framer-motion": "^12.29.0",
