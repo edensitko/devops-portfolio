@@ -1,5 +1,5 @@
-# Use Node.js 20.9.0 alpine as base image
-FROM node:20.9.0-alpine AS builder
+# Use Node.js 22 alpine as base image
+FROM node:22-alpine AS builder
 
 # Set working directory
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Production image
-FROM node:20.9.0-alpine AS runner
+FROM node:22-alpine AS runner
 
 WORKDIR /app
 
