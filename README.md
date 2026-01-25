@@ -1,65 +1,109 @@
-# 🚀 DevOps Engineer Portfolio
+<div align="center">
 
-A modern, interactive portfolio website designed to showcase DevOps skills and projects through the lens of a CI/CD pipeline. Built with **Next.js**, **Tailwind CSS**, and **Framer Motion**, this application offers a unique user experience where visitors navigate through different stages of the software development lifecycle (SDLC) to learn about the engineer.
+# 🚀 My DevOps Portfolio
+### The Interactive CI/CD Experience
 
-![Portfolio Preview](/public/devops.png)
+![Next.js](https://img.shields.io/badge/Next.js-15.1-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-## ✨ Features
+<br />
 
-- **Interactive DevOps Pipeline**: Navigate through stages like Plan, Code, Build, Test, Release, Deploy, Operate, and Monitor.
-- **Dynamic Animations**: Smooth transitions and engaging UI effects powered by Framer Motion.
-- **Real-Time Monitoring Dashboard**: A simulated system monitor with live metric visualizations.
-- **Contact Form Integration**: Fully functional contact form integrated with EmailJS.
-- **Responsive Design**: Mobile-friendly layout optimized for all devices.
-- **Project Showcase**: specific sections to highlight GitHub projects, certifications, and technical skills.
+**A unique portfolio that treats your career journey as a continuous integration pipeline.**
 
-## 🛠️ Tech Stack
+[Live Demo](https://edensitko.github.io/devops-portfolio/) · [Report Bug](#) · [Request Feature](#)
 
-- **Framework**: [Next.js 16](https://nextjs.org/) (React 19)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Email Service**: [EmailJS](https://www.emailjs.com/)
-- **Language**: TypeScript
+</div>
+
+---
+
+## 📖 About The Project
+
+![Portfolio Preview](public/devops.png)
+
+This isn't just another static portfolio. It's a **fully interactive experience** designed for the modern DevOps engineer. Built with the latest web technologies, it visualizes the Software Development Life Cycle (SDLC) as a navigable journey.
+
+Visitors don't just scroll—they **flow** through the stages of:
+`Plan` ➔ `Code` ➔ `Build` ➔ `Test` ➔ `Release` ➔ `Deploy` ➔ `Operate` ➔ `Monitor`
+
+### ✨ Key Features
+
+*   **🔄 Interactive DevOps Loop**: A central navigation hub representing the infinity loop of DevOps.
+*   **⚡ Dynamic Animations**: Powered by Framer Motion for glassy, smooth transitions.
+*   **🛠️ Tech Stack Visualization**: See skills and tools integrated directly into the `Code` and `Build` stages.
+*   **📊 Live Monitoring Dashboard**: A simulated `Monitor` stage showing "system metrics" (your activity).
+*   **🚀 Automated Deployments**: Watch projects "deploy" in real-time in the `Deploy` stage.
+*   **📱 Fully Responsive**: Optimized for desktop command centers and mobile monitoring.
+
+---
+
+## 🛠️ Built With
+
+*   **Framework**: [Next.js 16](https://nextjs.org/) (React 19)
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+*   **Animation**: [Framer Motion](https://www.framer.com/motion/)
+*   **Icons**: [Lucide React](https://lucide.dev/)
+*   **Contact**: [EmailJS](https://www.emailjs.com/)
+
+---
+
+## 🚦 Navigation Guide
+
+The portfolio is structured around the 8 stages of DevOps:
+
+| Stage | Component | Description |
+| :--- | :--- | :--- |
+| **📝 Plan** | `PlanStage.tsx` | Architecture diagrams & project roadmaps. |
+| **💻 Code** | `CodeStage.tsx` | Technical skills, languages, and tools. |
+| **🏗️ Build** | `BuildStage.tsx` | CI pipeline visualization & build logs. |
+| **🧪 Test** | `TestStage.tsx` | Quality assurance & testing methodologies. |
+| **📦 Release** | `ReleaseStage.tsx` | Version history & release notes. |
+| **🚀 Deploy** | `DeployStage.tsx` | **Project Showcase** - View deployed apps. |
+| **⚙️ Operate** | `OperateStage.tsx` | Certifications & operational experience. |
+| **📈 Monitor** | `MonitorStage.tsx` | Real-time dashboard & contact stats. |
+
+---
 
 
 
 ## 📂 Project Structure
 
-```
+```bash
 devops-portfolio/
 ├── public/              # Static assets (images, CV, icons)
 ├── src/
-│   ├── app/             # Next.js App Router pages and layout
+│   ├── app/             # App Router pages & layouts
 │   ├── components/
-│   │   ├── stages/      # Individual pipeline stage components
-│   │   │   ├── BuildStage.tsx
-│   │   │   ├── CodeStage.tsx
-│   │   │   ├── DeployStage.tsx
-│   │   │   ├── MonitorStage.tsx
-│   │   │   ├── OperateStage.tsx
-│   │   │   ├── PlanStage.tsx
-│   │   │   ├── ReleaseStage.tsx
-│   │   │   └── TestStage.tsx
-│   │   ├── DevOpsLoop.tsx      # Infinite loop animation component
-│   │   ├── DevOpsPipeline.tsx  # Main pipeline orchestration component
-│   │   └── WelcomeModal.tsx    # Initial welcome screen
-│   └── ...
+│   │   ├── stages/      # The 8 core stage components
+│   │   ├── DevOpsLoop.tsx      # The central navigation loop
+│   │   ├── DevOpsPipeline.tsx  # Main orchestrator
+│   │   └── WelcomeModal.tsx    # Intro screen
 └── ...
 ```
 
+---
+
 ## 🎨 Customization
 
-- **Projects**: Edit `src/components/stages/DeployStage.tsx` to add your own projects.
-- **Certifications**: Update `src/components/stages/OperateStage.tsx` with your credentials.
-- **Skills**: Modify `src/components/stages/CodeStage.tsx` to reflect your tech stack.
+Want to make it your own?
 
-## 📄 License
-
-This project is licensed under the MIT License. Feel free to use it as a template for your own portfolio!
+*   **Projects**: Edit `src/components/stages/DeployStage.tsx`.
+*   **Skills**: Update `src/components/stages/CodeStage.tsx`.
+*   **Bio/Certifications**: Modify `src/components/stages/OperateStage.tsx`.
 
 ---
 
-<p align="center">
-  Built with ❤️ by Eden Sitkovetsky
-</p>
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<div align="center">
+  <p>Built with ❤️ by Eden Sitkovetsky</p>
+  <p>
+    <a href="https://github.com/yourusername">GitHub</a> · 
+    <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+  </p>
+</div>
