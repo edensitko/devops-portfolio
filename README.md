@@ -20,7 +20,7 @@
 
 ## 📖 About The Project
 
-![Portfolio Preview](public/devops.png)
+<img src="public/devops.png" alt="Portfolio Preview" width="600" />
 
 This isn't just another static portfolio. It's a **fully interactive experience** designed for the modern DevOps engineer. Built with the latest web technologies, it visualizes the Software Development Life Cycle (SDLC) as a navigable journey.
 
