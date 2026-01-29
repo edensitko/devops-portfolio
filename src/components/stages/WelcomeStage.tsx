@@ -23,78 +23,80 @@ export default function WelcomeStage({ onStart }: WelcomeStageProps) {
     const bottomRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const runInitialAnimation = async () => {
-        const lines = [
-            { text: "$ ssh eden@portfolio.dev", color: "text-green-400 ", delay: 800, fontSize: 'text-xs' },
-            { text: "Connecting to DevOps Portfolio Server...", color: "text-gray-400", delay: 800, fontSize: 'text-xs' },
-            { text: "Connection established.", color: "text-green-400", delay: 800, fontSize: 'text-xs' },
-            { text: " ", delay: 100, fontSize: 'text-xs' },
-            { text: "$ cat /etc/motd", color: "text-green-400", delay: 800, fontSize: 'text-xs' },
-            { text: " ", delay: 400, fontSize: 'text-xs' },
-            {
-                html: true,
-                text: (
-                    <div className="border-l-4 border-yellow-500 bg-yellow-500/10 p-2 mb-2">
-                        <div className="flex items-start gap-1">
-                            <span className="text-yellow-500 font-bold text-xs">⚠ WARNING:</span>
-                            <span className="text-yellow-200 text-xs">NOT A REGULAR PORTFOLIO WEBSITE</span>
+    useEffect(() => {
+        let isMounted = true;
+
+        const runInitialAnimation = async () => {
+            const lines = [
+                { text: "$ ssh eden@portfolio.dev", color: "text-green-400 ", delay: 800, fontSize: 'text-xs' },
+                { text: "Connecting to DevOps Portfolio Server...", color: "text-gray-400", delay: 800, fontSize: 'text-xs' },
+                { text: "Connection established.", color: "text-green-400", delay: 800, fontSize: 'text-xs' },
+                { text: " ", delay: 100, fontSize: 'text-xs' },
+                { text: "$ cat /etc/motd", color: "text-green-400", delay: 800, fontSize: 'text-xs' },
+                { text: " ", delay: 400, fontSize: 'text-xs' },
+                {
+                    html: true,
+                    text: (
+                        <div className="border-l-4 border-yellow-500 bg-yellow-500/10 p-2 mb-2">
+                            <div className="flex items-start gap-1">
+                                <span className="text-yellow-500 font-bold text-xs">⚠ WARNING:</span>
+                                <span className="text-yellow-200 text-xs">NOT A REGULAR PORTFOLIO WEBSITE</span>
+                            </div>
+                            <div className="text-gray-400 text-xs mt-1 ml-2">
+                                This is an interactive DevOps CI/CD pipeline experience
+                            </div>
                         </div>
-                        <div className="text-gray-400 text-xs mt-1 ml-2">
-                            This is an interactive DevOps CI/CD pipeline experience
-                        </div>
-                    </div>
-                ),
-                delay: 200
-            },
-            {
-                html: true,
-                text: (
-                    <pre className="text-green-400 text-xs leading-tight mb-2 overflow-x-auto font-mono">
-                        {`╔════════════════════════════════════════════╗
+                    ),
+                    delay: 200
+                },
+                {
+                    html: true,
+                    text: (
+                        <pre className="text-green-400 text-xs leading-tight mb-2 overflow-x-auto font-mono">
+                            {`╔════════════════════════════════════════════╗
 ║  WELCOME TO MY DEVOPS PIPELINE PORTFOLIO ║
 ╚════════════════════════════════════════════╝`}
-                    </pre>
-                ),
-                delay: 100
-            },
-            {
-                html: true,
-                text: (
-                    <div className="space-y-0 mb-1">
-                        <div className="text-cyan-400">
-                            <span className="text-gray-500 text-xs">USER:</span> Eden Sitkovetsky
+                        </pre>
+                    ),
+                    delay: 100
+                },
+                {
+                    html: true,
+                    text: (
+                        <div className="space-y-0 mb-1">
+                            <div className="text-cyan-400">
+                                <span className="text-gray-500 text-xs">USER:</span> Eden Sitkovetsky
+                            </div>
+                            <div className="text-cyan-400">
+                                <span className="text-gray-500 text-xs">ROLE:</span> DevOps Engineer & Full-Stack Developer
+                            </div>
+                            <div className="text-gray-300 text-xs mt-2 mb-2 pl-1 border-l-2 border-gray-700">
+                                Hi there! 👋 I'm a passionate developer who loves building scalable applications and automating workflows. Instead of creating a traditional portfolio, I've built this interactive experience that mirrors a real DevOps CI/CD pipeline.
+                            </div>
                         </div>
-                        <div className="text-cyan-400">
-                            <span className="text-gray-500 text-xs">ROLE:</span> DevOps Engineer & Full-Stack Developer
-                        </div>
-                        <div className="text-gray-300 text-xs mt-2 mb-2 pl-1 border-l-2 border-gray-700">
-                            Hi there! 👋 I'm a passionate developer who loves building scalable applications and automating workflows. Instead of creating a traditional portfolio, I've built this interactive experience that mirrors a real DevOps CI/CD pipeline.
-                        </div>
-                    </div>
-                ),
-                delay: 200
-            },
+                    ),
+                    delay: 200
+                },
+            ];
 
+            for (const line of lines) {
+                if (!isMounted) return;
+                await new Promise(r => setTimeout(r, line.delay));
+                if (!isMounted) return;
+                setHistory(prev => [...prev, { ...line, id: Math.random().toString(36).substr(2, 9) }]);
+            }
 
+            if (isMounted) {
+                setIsTyping(false);
+                setTimeout(() => inputRef.current?.focus(), 100);
+            }
+        };
 
-
-
-        ];
-
-
-
-
-        for (const line of lines) {
-            await new Promise(r => setTimeout(r, line.delay));
-            setHistory(prev => [...prev, { ...line, id: Math.random().toString(36).substr(2, 9) }]);
-        }
-        setIsTyping(false);
-        // Force focus after animation
-        setTimeout(() => inputRef.current?.focus(), 100);
-    };
-
-    useEffect(() => {
         runInitialAnimation();
+
+        return () => {
+            isMounted = false;
+        };
     }, []);
 
     useEffect(() => {
