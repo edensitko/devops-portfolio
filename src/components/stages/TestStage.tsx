@@ -129,7 +129,7 @@ export default function TestStage() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#052e16]/60 backdrop-blur-xl border border-green-500/30 shadow-2xl rounded-2xl w-full max-w-2xl mx-auto flex flex-col h-[70vh] lg:h-[600px] overflow-hidden"
+            className="bg-[#052e16]/60 backdrop-blur-xl border border-green-500/30 shadow-2xl rounded-2xl w-full max-w-2xl mx-auto flex flex-col h-[75vh] lg:h-[600px] overflow-hidden"
         >
             <div className="flex-shrink-0 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 sm:gap-4 p-4 sm:p-8 border-b border-green-500/20 bg-[#0d1117]/50 backdrop-blur-md">
                 <div>

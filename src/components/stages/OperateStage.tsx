@@ -62,7 +62,7 @@ export default function OperateStage() {
             transition={{ duration: 0.5 }}
             className="w-full max-w-2xl mx-auto px-4"
         >
-            <div className="bg-[#134e4a]/60 backdrop-blur-xl border border-teal-500/30 shadow-2xl rounded-2xl overflow-hidden flex flex-col h-[70vh] lg:h-[600px]">
+            <div className="bg-[#134e4a]/60 backdrop-blur-xl border border-teal-500/30 shadow-2xl rounded-2xl overflow-hidden flex flex-col h-[75vh] lg:h-[600px]">
 
                 {/* Header - Fixed */}
                 <div className="px-4 sm:px-6 py-4 border-b border-teal-500/20 bg-[#0d1117]/80 backdrop-blur-md z-10 flex-shrink-0">
@@ -180,7 +180,7 @@ export default function OperateStage() {
                 </div>
 
                 {/* Footer - Connect Section - Fixed at Bottom */}
-                <div className="p-4 border-t border-teal-500/10 bg-[#0d1117]/80 backdrop-blur-md flex-shrink-0">
+                <div className="p-2 border-t border-teal-500/10 bg-[#0d1117]/80 backdrop-blur-md flex-shrink-0">
                     <h3 className="text-sm font-bold text-gray-400 mb-2 flex items-center gap-2 uppercase tracking-wider text-[10px]">
                         <ExternalLink className="w-3 h-3" />
                         Let's Connect

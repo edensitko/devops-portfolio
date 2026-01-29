@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DevOps Portfolio",
+  title: "Eden sitko devops portfolio",
   description: "Interactive CI/CD Pipeline Portfolio",
+  icons: {
+    icon: '/mylogo.png',
+    apple: '/mylogo.png',
+  },
 };
 
 export default function RootLayout({

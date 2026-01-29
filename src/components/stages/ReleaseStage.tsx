@@ -14,40 +14,40 @@ type ExperienceItem = {
 
 const experienceData: ExperienceItem[] = [
     {
-        id: 'election',
-        role: "Technical Support Specialist",
-        company: "Election Committee",
-        period: "Mar 2024 - Present",
-        version: "v24.03",
+        id: 'auraframe',
+        role: "DevOps Engineer",
+        company: "Auraframe.art",
+        period: "Mar 2025 - Present",
+        version: "v25.03",
         type: 'work',
-        description: "Working on a new software project for the Election Committee. Providing technical support and troubleshooting for the election management system. Assisting with software implementation and user training."
+        description: "Develop cloud infrastructure with Terraform and Jenkins, deploy apps using Docker and Kubernetes, and automate workflows with Python, Bash, and Ansible. Working with AWS services to build scalable and reliable infrastructure solutions."
+    },
+    {
+        id: 'ramat-gan',
+        role: "IT Help Desk",
+        company: "Ramat Gan municipality",
+        period: "Jan 2025 - Mar 2025",
+        version: "v25.01",
+        type: 'work',
+        description: "Providing support for Windows/Linux systems, network issues, and Microsoft applications. Managing user accounts (Active Directory), remote assistance, system imaging, hardware troubleshooting, and BIOS configuration."
+    },
+    {
+        id: 'election-committee',
+        role: "IT Support Coordinator",
+        company: "Election Committee",
+        period: "Oct 2024 - Jan 2025",
+        version: "v24.10",
+        type: 'work',
+        description: "Provided end-user support including application troubleshooting, system setup (Windows/Linux), image deployment, and network configuration. Assisted users with onboarding and ensured smooth usage of internal systems and software."
     },
     {
         id: 'morevision',
         role: "Website Developer",
-        company: "morevision",
-        period: "Feb 2023 - Dec 2023",
-        version: "v23.02",
+        company: "morevision.ai",
+        period: "Nov 2023 - Sep 2024",
+        version: "v23.11",
         type: 'work',
-        description: "Built and maintained more than 100 websites for company clients using WordPress, HTML, CSS, PHP and JavaScript. Collaborated with the development team to create effective UI/UX designs. Optimized sites for speed and search engine optimization."
-    },
-    {
-        id: 'john-brice',
-        role: "Full-Stack Web Development",
-        company: "John Brice",
-        period: "Jan 2023 - Aug 2023",
-        version: "v23.01",
-        type: 'education',
-        description: "Completed a comprehensive Full-Stack Development course, covering front-end and back-end technologies. Gained hands-on experience with frameworks like React and Node.js, database management with MongoDB, and essential skills in API development, version control, and deployment."
-    },
-    {
-        id: 'freelance',
-        role: "Web & Mobile Developer",
-        company: "Freelance",
-        period: "Oct 2022 - Present",
-        version: "v22.10",
-        type: 'work',
-        description: "Developing web and mobile applications for various clients and projects. Developed Motiv, a fitness app for teachers in the Ministry of Education, now available on the App Store and Google Play. Built custom websites using HTML, CSS, JavaScript, and WordPress."
+        description: "Built and maintained websites for company clients using WordPress, HTML, CSS, PHP and JavaScript. Collaborated with the development team to create effective UI/UX designs. Specialized in full-stack web development and optimized sites for performance and SEO."
     }
 ];
 
@@ -64,13 +64,13 @@ export default function ReleaseStage() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#2e1065]/60 backdrop-blur-xl border border-purple-500/30 shadow-2xl rounded-2xl w-full max-w-2xl mx-auto flex flex-col h-[70vh] lg:h-[600px] overflow-hidden"
+            className="bg-[#2e1065]/60 backdrop-blur-xl border border-purple-500/30 shadow-2xl rounded-2xl w-full max-w-2xl mx-auto flex flex-col h-[75vh] lg:h-[600px] overflow-hidden"
         >
             <div className="flex-shrink-0 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 sm:gap-4 p-4 sm:p-8 border-b border-purple-500/20 bg-[#0d1117]/50 backdrop-blur-md">
                 <div>
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Professional Journey</h2>
                     <p className="text-purple-200/70 text-xs sm:text-sm max-w-sm">
-                        My professional journey as a full-stack developer, with experience in web and mobile development.
+                        My professional journey as a full-stack developer, devops engineer, IT professional.
                     </p>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 bg-purple-900/30 px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-purple-500/20">

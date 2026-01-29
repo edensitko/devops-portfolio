@@ -28,28 +28,27 @@ export default function PlanStage() {
                 <div className="absolute inset-0 bg-repeat opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
 
                 {/* Header */}
-                <div className="px-4 py-4 border-b-2 border-gray-300 relative z-10 flex justify-between items-start">
+                <div className="px-2 py-2 border-b-2 border-gray-300 relative z-10 flex justify-between items-start">
                     <div>
-                        <h2 className="text-2xl font-marker font-bold text-gray-900 mb-2 flex items-center gap-3">
+                        <h2 className="text-lg font-marker font-bold text-gray-900 mb-2 flex items-center gap-3">
                             <FileText className="w-8 h-8 text-indigo-600" />
                             Project Blueprint
                         </h2>
-                        <p className="text-gray-600 font-handwriting text-md italic">
+                        <p className="text-gray-600 font-handwriting text-sm italic">
                             Initial planning and architecture phase
                         </p>
                     </div>
-                    <div className="bg-yellow-200 px-4 py-2 transform -rotate-2 shadow-md border border-yellow-300">
-                        <span className="font-bold text-yellow-800 font-mono text-xs">STATUS: APPROVED</span>
+                    <div className="bg-yellow-200 px-2 py-1 transform -rotate-2 shadow-md border border-yellow-300">
+                        <span className="font-bold text-yellow-900 font-mono text-xs">STATUS:<span className='text-green-800'> APPROVED </span></span>
                     </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 overflow-y-auto p-6 relative z-10">
+                <div className="flex-1 overflow-y-auto p-4 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                         {/* Section 1: External Link */}
-                        <div className="space-y-4">
-                            <h3 className="text-xl font-bold border-b-2 border-indigo-200 pb-1 inline-block">Freelance & Services</h3>
+                        <div className="space-y-2">
                             <a
                                 href="https://edensitko.com"
                                 target="_blank"
@@ -67,7 +66,7 @@ export default function PlanStage() {
                         </div>
 
                         {/* Section 2: Pipeline Plan */}
-                        <div className="space-y-4">
+                        <div className="space-y-2">
                             <h3 className="text-xl font-bold border-b-2 border-indigo-200 pb-1 inline-block">Pipeline Strategy</h3>
                             <div className="bg-white/50 p-4 rounded-lg border border-gray-200">
                                 <div className="space-y-3">

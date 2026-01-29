@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import DevOpsPipeline from "@/components/DevOpsPipeline";
 import WelcomeStage from "@/components/stages/WelcomeStage";
+import FloatingTerminal from "@/components/FloatingTerminal";
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Home() {
@@ -34,6 +35,9 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Floating Terminal - Always Available */}
+      <FloatingTerminal />
     </main>
   );
 }

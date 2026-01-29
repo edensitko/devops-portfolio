@@ -152,9 +152,9 @@ export default function BuildStage({ progress: externalProgress }: { progress: n
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
-            className="w-full max-w-2xl mx-auto px-1 sm:px-1"
+            className="w-full max-w-2xl mx-auto px-4 sm:px-2"
         >
-            <div className="bg-[#0d1117] border border-yellow-500/20 rounded-lg sm:rounded-xl overflow-hidden shadow-2xl flex flex-col h-[70vh] lg:h-[600px]">
+            <div className="bg-[#0d1117] border border-yellow-500/20 rounded-lg sm:rounded-xl overflow-hidden shadow-2xl flex flex-col h-[75vh] lg:h-[600px]">
                 {/* Terminal Header */}
                 <div className="bg-[#161b22] px-2 sm:px-3 py-1 border-b border-gray-800 flex items-center justify-between flex-shrink-0">
                     <div className="flex items-center gap-2">
@@ -199,9 +199,9 @@ export default function BuildStage({ progress: externalProgress }: { progress: n
                                 className="space-y-1 mt-2"
                             >
                                 {/* Header */}
-                                <div className="text-blue-400 break-words">═══════════════════════════════════════════════════════</div>
+                                <div className="text-blue-400 break-words">══════════════════════════════════════════</div>
                                 <div className="text-blue-400 text-center font-bold break-words">MY SERVICES</div>
-                                <div className="text-blue-400 break-words">═══════════════════════════════════════════════════════</div>
+                                <div className="text-blue-400 break-words">══════════════════════════════════════════</div>
                                 <div className="text-gray-400 break-words">Professional services I offer across cloud engineering,</div>
                                 <div className="text-gray-400 break-words">web development, DevOps, and infrastructure management.</div>
                                 <div className="text-gray-400"></div>
@@ -212,11 +212,11 @@ export default function BuildStage({ progress: externalProgress }: { progress: n
                                         {index < currentServiceIndex && (
                                             // Already completed services - show everything instantly
                                             <>
-                                                <div className="text-gray-400 break-words">───────────────────────────────────────────────────────</div>
+                                                <div className="text-gray-400 break-words">──────────────────────────────────────────</div>
                                                 <div className={getLineStyle(service.type)}>
                                                     {service.text}
                                                 </div>
-                                                <div className="text-gray-400 break-words">───────────────────────────────────────────────────────</div>
+                                                <div className="text-gray-400 break-words">──────────────────────────────────────────</div>
                                                 {service.subItems?.map((subItem, subIndex) => (
                                                     <div key={subIndex} className="text-gray-400 break-words">
                                                         {subItem}
@@ -228,14 +228,14 @@ export default function BuildStage({ progress: externalProgress }: { progress: n
                                         {index === currentServiceIndex && (
                                             // Current service - typing title with instant subtext
                                             <>
-                                                <div className="text-gray-400 break-words">───────────────────────────────────────────────────────</div>
+                                                <div className="text-gray-400 break-words">──────────────────────────────────────────</div>
                                                 <div className={getLineStyle(service.type)}>
                                                     <TypingText
                                                         text={service.text}
                                                         onComplete={handleServiceComplete}
                                                     />
                                                 </div>
-                                                <div className="text-gray-400 break-words">───────────────────────────────────────────────────────</div>
+                                                <div className="text-gray-400 break-words">──────────────────────────────────────────</div>
                                                 {/* Subtext appears instantly when title starts typing */}
                                                 {service.subItems?.map((subItem, subIndex) => (
                                                     <motion.div
@@ -258,7 +258,7 @@ export default function BuildStage({ progress: externalProgress }: { progress: n
                                 {/* Footer - shows when all services are done */}
                                 {currentServiceIndex >= services.length - 1 && (
                                     <>
-                                        <div className="text-blue-400">═══════════════════════════════════════════════════════</div>
+                                        <div className="text-blue-400">═══════════════════════════════════════════</div>
                                         <div className="text-green-400">✨ Services catalog loaded successfully!</div>
                                     </>
                                 )}

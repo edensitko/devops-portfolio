@@ -34,7 +34,7 @@ const stageDisplayNames: Record<Stage, string> = {
   code: 'Code',
   build: 'Build',
   test: 'Test',
-  release: 'Journey', // Renamed from Release
+  release: 'Release', // Renamed from Release
   deploy: 'Deploy',
   operate: 'Operate',
   monitor: 'Monitor',
